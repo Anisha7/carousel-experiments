@@ -3,8 +3,8 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    // options on main-carousel can be set using:
-    // data-flickity='{ "cellAlign": "left", "contain": true }'
+    // NOTE: replace a tags with Link tags (import from react-router-dom)
+    // after wrapping App in Router.
     <div className="navbar">
       <ul>
         <li>
