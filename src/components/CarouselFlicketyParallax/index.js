@@ -1,5 +1,5 @@
 import React from "react";
-import Flickity from "flickity";
+import Flickity from "flickity-imagesloaded";
 import "./styles.css";
 
 class CarouselFlicketyParallax extends React.Component {
