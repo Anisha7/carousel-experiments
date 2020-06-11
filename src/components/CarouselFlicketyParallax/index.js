@@ -8,36 +8,6 @@ class CarouselFlicketyParallax extends React.Component {
     this.state = {
       mount: false,
     };
-    this.images = [
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"
-        alt="orange tree"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"
-        alt="One World Trade"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"
-        alt="drizzle"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"
-        alt="cat nose"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"
-        alt="contrail"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"
-        alt="golden hour"
-      />,
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"
-        alt="flight formation"
-      />,
-    ];
   }
   componentDidMount() {
     this.setState({ mount: true });
