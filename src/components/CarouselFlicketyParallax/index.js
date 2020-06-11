@@ -20,6 +20,10 @@ class CarouselFlicketyParallax extends React.Component {
       var flkty = new Flickity(carousel, {
         imagesLoaded: true,
         percentPosition: false,
+        autoPlay: true,
+        wrapAround: true,
+        // groupCells: true,
+        cellAlign: "center",
       });
 
       var imgs = carousel.querySelectorAll(".carousel-cell img");
@@ -30,9 +34,33 @@ class CarouselFlicketyParallax extends React.Component {
 
       flkty.on("scroll", function () {
         flkty.slides.forEach(function (slide, i) {
-          var img = imgs[i];
-          var x = ((slide.target + flkty.x) * -1) / 3;
-          img.style[transformProp] = "translateX(" + x + "px)";
+          // var img = imgs[i];
+          // var x = ((slide.target + flkty.x) * -1) / 3;
+          // img.style[transformProp] = "translateX(" + x + "px)";
+
+          var img = imgs[i],
+            x = 0;
+
+          if (0 === i) {
+            x =
+              Math.abs(flkty.x) > flkty.slidesWidth
+                ? flkty.slidesWidth +
+                  flkty.x +
+                  flkty.slides[flkty.slides.length - 1].outerWidth +
+                  slide.target
+                : slide.target + flkty.x;
+          } else if (i === flkty.slides.length - 1) {
+            x =
+              Math.abs(flkty.x) + flkty.slides[i].outerWidth < flkty.slidesWidth
+                ? slide.target -
+                  flkty.slidesWidth +
+                  flkty.x -
+                  flkty.slides[i].outerWidth
+                : slide.target + flkty.x;
+          } else {
+            x = slide.target + flkty.x;
+          }
+          img.style[transformProp] = "translateX(" + x * (-1 / 3) + "px)";
         });
       });
     }
