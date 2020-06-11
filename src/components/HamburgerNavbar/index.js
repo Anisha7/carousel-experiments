@@ -10,7 +10,7 @@ const HamburgerNavbar = () => {
     // after wrapping App in Router.
     // track open state with isOpen prop
     
-    <Menu slide width={ '400px' }>
+    <Menu slide width={ '350px' }>
       <a id="about" className="menu-item" href="/">
         About
       </a>
@@ -20,7 +20,7 @@ const HamburgerNavbar = () => {
       <a id="blog" className="menu-item" href="/contact">
         Blog
       </a>
-      <a className="menu-item--small" href="">
+      <a className="menu-item" href="">
         Contact
       </a>
     </Menu>

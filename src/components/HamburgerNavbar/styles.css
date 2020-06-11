@@ -65,4 +65,29 @@
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+
+  }
+
+  /* Style menu items */
+  .menu-item {
+      text-decoration: none;
+      list-style-type: none;
+      color: white;
+  }
+
+  .menu-item:link, .menu-item:visited {
+    /* background-color: #f44336; */
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .menu-item:hover,  .menu-item:active {
+    background-color: pink;
+    color: #373a47;
   }
