@@ -20,9 +20,8 @@ class CarouselFlicketyParallax extends React.Component {
       var flkty = new Flickity(carousel, {
         imagesLoaded: true,
         percentPosition: false,
-        autoPlay: true,
+        autoPlay: 2000,
         wrapAround: true,
-        // groupCells: true,
         cellAlign: "center",
       });
 

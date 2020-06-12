@@ -7,9 +7,24 @@ import CarouselFlicketyParallax from "./components/CarouselFlicketyParallax";
 import Navbar from "./components/Navbar";
 import HamburgerNavbar from "./components/HamburgerNavbar";
 import TypedReactDemo from "./components/TypedReactDemo";
+import Popup from "./components/Popup";
+
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+const THEME = createMuiTheme({
+  typography: {
+   "fontFamily": `sans-serif`,
+   "fontSize": 14,
+   "fontWeightLight": 300,
+   "fontWeightRegular": 400,
+   "fontWeightMedium": 500
+  }
+});
 
 function App() {
   return (
+    <ThemeProvider theme={THEME}>
     <div>
       <HamburgerNavbar />
       <div className="App">
@@ -26,8 +41,10 @@ function App() {
             "HTML characters &times; &copy;",
           ]}
         />
+        <Popup />
       </div>
     </div>
+    </ThemeProvider>
   );
 }
 
