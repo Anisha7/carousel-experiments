@@ -1,5 +1,5 @@
 import React from "react";
-import Typed from 'typed.js';
+import Typed from "typed.js";
 
 class TypedReactDemo extends React.Component {
   componentDidMount() {

@@ -5,45 +5,39 @@ import "./App.css";
 // import CarouselFlickety from "./components/CarouselFlickety";
 import CarouselFlicketyParallax from "./components/CarouselFlicketyParallax";
 import ResponsiveNavbar from "./components/ResponsiveNavbar";
-import HamburgerNavbar from "./components/HamburgerNavbar";
 import TypedReactDemo from "./components/TypedReactDemo";
 import Popup from "./components/Popup";
 
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 
 const THEME = createMuiTheme({
   typography: {
-   "fontFamily": `sans-serif`,
-   "fontSize": 14,
-   "fontWeightLight": 300,
-   "fontWeightRegular": 400,
-   "fontWeightMedium": 500,
-  }
+    fontFamily: `sans-serif`,
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+  },
 });
 
 function App() {
   return (
     <ThemeProvider theme={THEME}>
-    <div>
-      {/* <HamburgerNavbar /> */}
-      <div className="App">
-        {/* <HamburgerNavbar /> */}
-        <ResponsiveNavbar />
-        {/* <CarouselGlide /> */}
-        {/* <CarouselGlide2 /> */}
-        {/* <CarouselFlickety /> */}
-        <CarouselFlicketyParallax />
-        <TypedReactDemo
-          strings={[
-            "Some <i>strings</i> are slanted",
-            "Some <strong>strings</strong> are bold",
-            "HTML characters &times; &copy;",
-          ]}
-        />
-        <Popup />
+      <div>
+        <div className="App">
+          <ResponsiveNavbar />
+          <CarouselFlicketyParallax />
+          <TypedReactDemo
+            strings={[
+              "Some <i>strings</i> are slanted",
+              "Some <strong>strings</strong> are bold",
+              "HTML characters &times; &copy;",
+            ]}
+          />
+          <Popup />
+        </div>
       </div>
-    </div>
     </ThemeProvider>
   );
 }
