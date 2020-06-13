@@ -4,7 +4,7 @@ import "./App.css";
 // import CarouselGlide2 from "./components/Carousel2";
 // import CarouselFlickety from "./components/CarouselFlickety";
 import CarouselFlicketyParallax from "./components/CarouselFlicketyParallax";
-import Navbar from "./components/Navbar";
+import ResponsiveNavbar from "./components/ResponsiveNavbar";
 import HamburgerNavbar from "./components/HamburgerNavbar";
 import TypedReactDemo from "./components/TypedReactDemo";
 import Popup from "./components/Popup";
@@ -18,7 +18,7 @@ const THEME = createMuiTheme({
    "fontSize": 14,
    "fontWeightLight": 300,
    "fontWeightRegular": 400,
-   "fontWeightMedium": 500
+   "fontWeightMedium": 500,
   }
 });
 
@@ -26,10 +26,10 @@ function App() {
   return (
     <ThemeProvider theme={THEME}>
     <div>
-      <HamburgerNavbar />
+      {/* <HamburgerNavbar /> */}
       <div className="App">
         {/* <HamburgerNavbar /> */}
-        <Navbar />
+        <ResponsiveNavbar />
         {/* <CarouselGlide /> */}
         {/* <CarouselGlide2 /> */}
         {/* <CarouselFlickety /> */}

@@ -7,6 +7,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import Box from '@material-ui/core/Box';
 // https://material-ui.com/components/dialogs/#FormDialog.js
 const Popup = () => {
   const [open, setOpen] = useState(true);
@@ -19,17 +20,19 @@ const Popup = () => {
     setOpen(false);
   };
 
+  const letterSpacing = 10;
+
   return (
-    <div className="container">
+    <div className="container" >
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Subscribe
+        SUBSCRIBE
       </Button>
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title"><Box letterSpacing={"0.15em"}>SUBSCRIBE</Box></DialogTitle>
         <DialogContent>
           <DialogContentText>
             To subscribe to this website, please enter your email address here.
@@ -39,7 +42,7 @@ const Popup = () => {
             autoFocus
             margin="dense"
             id="name"
-            label="Email Address"
+            label="EMAIL ADDRESS"
             type="email"
             fullWidth
           />

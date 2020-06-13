@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const Navbar = () => {
+const WebNavbar = () => {
   return (
     // NOTE: replace a tags with Link tags (import from react-router-dom)
     // after wrapping App in Router.
@@ -24,4 +24,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default WebNavbar;
